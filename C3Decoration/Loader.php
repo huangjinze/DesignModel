@@ -1,0 +1,15 @@
+<?php
+namespace C3Decoration;
+/**
+ * Created by PhpStorm.
+ * User: huang
+ * Date: 2017/6/30
+ * Time: 16:14
+ */
+class Loader
+{
+    static function autoload($class)
+    {
+        require BASEDIR.'/'.str_replace('\\','/',$class).'.php';
+    }
+}
